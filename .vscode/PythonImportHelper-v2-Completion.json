@@ -32,11 +32,19 @@
         "documentation": {}
     },
     {
+        "label": "my_post",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "Post",
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}",
+        "peekOfCode": "class Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\nmy_post = [{\"title:\" \"title of post 1\", \"content:\" \"content of post 1\", \"id:\" \"1\"}, {\n    \"title:\" \"title of post 2\", \"content:\" \"content of post 2\", \"id:\" \"2\"}]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}",
         "detail": "main",
         "documentation": {}
     },
@@ -45,7 +53,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def get_post():\n    return {\"data\": \"This is your post\"}\n@app.post(\"/createpost\")\ndef create_post(post: Post):\n    print(post.dict())\n    return{\"data\":post}",
+        "peekOfCode": "def get_post():\n    return {\"data\": my_post}\n@app.post(\"/posts\")\ndef create_post(post: Post):\n    print(post.dict())\n    return {\"data\": post}",
         "detail": "main",
         "documentation": {}
     },
@@ -54,7 +62,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def create_post(post: Post):\n    print(post.dict())\n    return{\"data\":post}",
+        "peekOfCode": "def create_post(post: Post):\n    print(post.dict())\n    return {\"data\": post}",
         "detail": "main",
         "documentation": {}
     },
@@ -63,7 +71,16 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nclass Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\n@app.get(\"/\")\nasync def root():",
+        "peekOfCode": "app = FastAPI()\nclass Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\nmy_post = [{\"title:\" \"title of post 1\", \"content:\" \"content of post 1\", \"id:\" \"1\"}, {\n    \"title:\" \"title of post 2\", \"content:\" \"content of post 2\", \"id:\" \"2\"}]\n@app.get(\"/\")\nasync def root():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "my_post",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "my_post = [{\"title:\" \"title of post 1\", \"content:\" \"content of post 1\", \"id:\" \"1\"}, {\n    \"title:\" \"title of post 2\", \"content:\" \"content of post 2\", \"id:\" \"2\"}]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}\n@app.get(\"/posts\")\ndef get_post():\n    return {\"data\": my_post}\n@app.post(\"/posts\")\ndef create_post(post: Post):",
         "detail": "main",
         "documentation": {}
     }
