@@ -44,7 +44,7 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\nmy_post = [{\"title:\" \"title of post 1\", \"content:\" \"content of post 1\", \"id:\" \"1\"}, {\n    \"title:\" \"title of post 2\", \"content:\" \"content of post 2\", \"id:\" \"2\"}]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}",
+        "peekOfCode": "class Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\nmy_post = [{\"title\": \"title of post 1\", \"content\": \"content of post 1\", \"id\": 1}, {\n    \"title\": \"Favourite foods\", \"content\": \"I love eating pizza\", \"id\": 2}]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}",
         "detail": "main",
         "documentation": {}
     },
@@ -71,7 +71,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\nclass Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\nmy_post = [{\"title:\" \"title of post 1\", \"content:\" \"content of post 1\", \"id:\" \"1\"}, {\n    \"title:\" \"title of post 2\", \"content:\" \"content of post 2\", \"id:\" \"2\"}]\n@app.get(\"/\")\nasync def root():",
+        "peekOfCode": "app = FastAPI()\nclass Post(BaseModel):\n    title: str\n    content: str\n    isPublished: bool = True\n    rating: Optional[int] = None\nmy_post = [{\"title\": \"title of post 1\", \"content\": \"content of post 1\", \"id\": 1}, {\n    \"title\": \"Favourite foods\", \"content\": \"I love eating pizza\", \"id\": 2}]\n@app.get(\"/\")\nasync def root():",
         "detail": "main",
         "documentation": {}
     },
@@ -80,7 +80,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "my_post = [{\"title:\" \"title of post 1\", \"content:\" \"content of post 1\", \"id:\" \"1\"}, {\n    \"title:\" \"title of post 2\", \"content:\" \"content of post 2\", \"id:\" \"2\"}]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}\n@app.get(\"/posts\")\ndef get_post():\n    return {\"data\": my_post}\n@app.post(\"/posts\")\ndef create_post(post: Post):",
+        "peekOfCode": "my_post = [{\"title\": \"title of post 1\", \"content\": \"content of post 1\", \"id\": 1}, {\n    \"title\": \"Favourite foods\", \"content\": \"I love eating pizza\", \"id\": 2}]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to my api\"}\n@app.get(\"/posts\")\ndef get_post():\n    return {\"data\": my_post}\n@app.post(\"/posts\")\ndef create_post(post: Post):",
         "detail": "main",
         "documentation": {}
     }
